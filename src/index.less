@@ -1,0 +1,185 @@
+.luban-nav-mask {
+  z-index: 1999;
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+}
+.luban-nav-panel {
+  z-index: 2000;
+  position: fixed;
+  margin-top: 54px;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  display: flex;
+  transform: translateX(-100%);
+  transition: all .3s ease-in-out;
+  &.nav-open {
+    transform: translateX(0);
+  }
+  .nav-left {
+    z-index: 2001;
+    position: relative;
+    width: 250px;
+    background: #000A17;
+    .nav-all {
+      position: relative;
+      padding: 16px;
+      font-size: 14px;
+      line-height: 20px;
+      color: #fff;
+      text-align: left;
+      cursor: pointer;
+      i {
+        display: inline-block;
+        margin-right: 3px;
+        width: 16px;
+        height: 16px;
+        vertical-align: -3px;
+        background: url(./assets/icon-nav-all.png) no-repeat;
+        background-size: contain;
+      }
+      &:hover {
+        background: #061528;
+      }
+      &.active {
+        background: #061528;
+        &::after {
+          content: '';
+          position: absolute;
+          bottom: 0;
+          left: 16px;
+          right: 16px;
+          height: 1px;
+          background: rgba(255,255,255,0.08);
+        }
+      }
+    }
+    .nav-collect {
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 52px;
+      bottom: 0;
+      overflow: auto;
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      .nav-item {
+        position: relative;
+        padding: 16px;
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+        .nav-item-title {
+          flex: 1;
+          display: block;
+          font-size: 14px;
+          line-height: 20px;
+          color: #fff;
+          text-align: left;
+        }
+        .nav-item-close {
+          display: block;
+          width: 12px;
+          height: 12px;
+          opacity: 0;
+          background: url(./assets/icon-nav-close.png) no-repeat;
+          background-size: contain;
+        }
+        &:hover {
+          background: #061528;
+          .nav-item-close {
+            opacity: 1;
+          }
+        }
+      }
+    }
+  }
+  .nav-right {
+    z-index: 2000;
+    position: absolute;
+    left: 250px;
+    top: 0;
+    bottom: 0;
+    width: 560px;
+    background: #061528;
+    overflow: auto;
+    transform: translateX(-100%);
+    transition: all .24s ease-in-out;
+    &.nav-right-open {
+      transform: translateX(0);
+    }
+    .pro-box {
+      margin-bottom: 20px;
+      .pro-category {
+        position: relative;
+        margin: 0 24px;
+        padding: 16px 0;
+        font-size: 16px;
+        line-height: 20px;
+        text-align: left;
+        color: #fff;
+        padding-left: 24px;
+        border-bottom: 1px solid rgba(255,255,255,0.08);
+        &::before {
+          content: '';
+          display: block;
+          position: absolute;
+          top: 17px;
+          left: 8px;
+          width: 4px;
+          height: 16px;
+          background: #2E92F7;
+        }
+      }
+      .pro-list {
+        display: flex;
+        flex-wrap: wrap;
+        .pro-item {
+          width: 50%;
+          margin: 8px 0;
+          .pro-item-inner {
+            display: flex;
+            align-items: center;
+            padding: 8px;
+            margin: 0 24px;
+            cursor: pointer;
+            &:hover {
+              background: #15253A;
+              border-radius: 4px;
+              .pro-item-star {
+                opacity: 1;
+              }
+            }
+            .pro-item-txt {
+              flex: 1;
+              display: block;
+              font-size: 14px;
+              line-height: 20px;
+              text-align: left;
+              color: #fff;
+            }
+            .pro-item-star {
+              display: block;
+              opacity: 0;
+              width: 20px;
+              height: 20px;
+              border-radius: 50%;
+              background: url(./assets/icon-nav-star.png) no-repeat;
+              background-size: contain;
+              &.favorited {
+                opacity: 1;
+                background: url(./assets/icon-nav-stard.png) no-repeat;
+                background-size: contain;
+              }
+            }
+          }
+
+        }
+      }
+    }
+  }
+}

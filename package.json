@@ -1,0 +1,52 @@
+{
+  "name": "react-luban-menu",
+  "description": "A simple luban navigation menu component for react.js",
+  "version": "1.0.0",
+  "main": "dist/react-luban-menu.js",
+  "author": "luban08 <953682318@qq.com>",
+  "license": "MIT",
+  "private": false,
+  "files": [
+    "dist",
+    "src"
+  ],
+  "keywords": [
+    "react",
+    "nav",
+    "navigation",
+    "menu",
+    "luban"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/luban08/ReactLubanMenu"
+  },
+  "bugs": {
+    "url": "https://github.com/luban08/ReactLubanMenu/issues"
+  },
+  "scripts": {
+    "start": "webpack-dev-server --mode development",
+    "build": "webpack --config webpack.prod.js"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.2.2",
+    "@babel/preset-env": "^7.2.3",
+    "@babel/preset-react": "^7.0.0",
+    "babel-loader": "^8.2.2",
+    "classnames": "^2.2.6",
+    "css-loader": "^2.1.0",
+    "html-webpack-plugin": "^3.2.0",
+    "less": "^3.9.0",
+    "less-loader": "^4.1.0",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "style-loader": "^0.23.1",
+    "url-loader": "^4.1.1",
+    "webpack": "^4.28.3",
+    "webpack-cli": "^3.2.0",
+    "webpack-dev-server": "^3.1.14"
+  },
+  "dependencies": {
+    "prop-types": "^15.7.2"
+  }
+}
