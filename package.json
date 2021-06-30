@@ -1,7 +1,7 @@
 {
   "name": "react-luban-menu",
   "description": "A simple luban navigation menu component for react.js",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "main": "dist/react-luban-menu.js",
   "author": "luban08 <953682318@qq.com>",
   "license": "MIT",
