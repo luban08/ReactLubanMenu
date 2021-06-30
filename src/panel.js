@@ -59,7 +59,7 @@ export default class Panel extends React.PureComponent {
     const { favoriteList } = this.state;
     const { zIndex, offsetTop, apps, open, expandRight } = this.props;
     const panel = (
-      <div className={classnames(styles["luban-nav-panel"], open ? styles["nav-open"] : '')} style={{zIndex, marginTop: offsetTop + 'px'}} ref="navMenu">
+      <div className={classnames(styles["luban-nav-panel"], open ? styles["nav-open"] : '')} style={{zIndex, marginTop: offsetTop + 'px'}}>
         <div className={styles["nav-left"]} style={{zIndex: zIndex + 1}}>
           <div className={classnames(styles["nav-all"], expandRight ? styles["active"] : '' )} onMouseEnter={()=>this.props.showRight()}>
             <i></i>
