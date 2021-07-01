@@ -7,15 +7,17 @@ export default class Panel extends React.PureComponent {
   constructor(props) {
     super(props);
     this.state = {
+      favoritesOrigin: this.props.favorites, // 保留原始props的favorites以做比对
       favoriteList: this.props.favorites,
     }
   }
 
   static getDerivedStateFromProps(nextProps, prevState) {
-    const { favoriteList } = prevState;
+    const { favoritesOrigin } = prevState;
     const nextFavoriteList = nextProps.favorites;
-    if ((JSON.stringify(favoriteList) !== JSON.stringify(nextFavoriteList))) {
+    if ((JSON.stringify(favoritesOrigin) !== JSON.stringify(nextFavoriteList))) {
       return {
+        favoritesOrigin: nextFavoriteList,
         favoriteList: nextFavoriteList
       }
     }
