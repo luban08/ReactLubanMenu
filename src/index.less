@@ -14,10 +14,12 @@
   top: 0;
   bottom: 0;
   display: flex;
+  visibility: hidden;
   transform: translateX(-100%);
   transition: all .3s ease-in-out;
   &.nav-open {
     transform: translateX(0);
+    visibility: visible;
   }
   .nav-left {
     z-index: 2001;
